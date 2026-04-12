@@ -2,6 +2,8 @@
 
 int main()
 {
-	printf("²âÊÔÌá½»\n");
+	int a = 1;
+	int* p = a;
+	printf("%d", p);
 	return 0;
 }
