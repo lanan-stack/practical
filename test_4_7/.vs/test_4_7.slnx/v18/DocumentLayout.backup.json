@@ -30,9 +30,9 @@
               "Title": "test.c",
               "DocumentMoniker": "D:\\code\\test_c\\test_4_7\\test_4_7\\test.c",
               "RelativeDocumentMoniker": "test_4_7\\test.c",
-              "ToolTip": "D:\\code\\test_c\\test_4_7\\test_4_7\\test.c*",
-              "RelativeToolTip": "test_4_7\\test.c*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABEAAAAAAAAAA==",
+              "ToolTip": "D:\\code\\test_c\\test_4_7\\test_4_7\\test.c",
+              "RelativeToolTip": "test_4_7\\test.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2026-04-07T13:07:50.761Z",
               "IsPinned": true,
@@ -48,8 +48,7 @@
               "RelativeToolTip": "test_4_7\\game.c",
               "ViewState": "AgIAADAAAAAAAAAAAAAuwDoAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2026-04-11T07:04:55.881Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T07:04:55.881Z"
             },
             {
               "$type": "Document",
@@ -61,8 +60,7 @@
               "RelativeToolTip": "test_4_7\\game.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-11T07:05:13.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T07:05:13.554Z"
             }
           ]
         }
