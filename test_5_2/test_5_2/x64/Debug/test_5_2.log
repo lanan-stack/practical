@@ -1,0 +1,4 @@
+﻿  test.c
+D:\code\test_c\test_5_2\test_5_2\test.c(10,14): warning C4013: “strlen”未定义；假设外部返回 int
+D:\code\test_c\test_5_2\test_5_2\test.c(14,3): warning C4013: “Sleep”未定义；假设外部返回 int
+  test_5_2.vcxproj -> D:\code\test_c\test_5_2\x64\Debug\test_5_2.exe
