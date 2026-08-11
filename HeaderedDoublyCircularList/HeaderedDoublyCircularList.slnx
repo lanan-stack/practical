@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="HeaderedDoublyCircularList/HeaderedDoublyCircularList.vcxproj" Id="80760db7-929b-4168-ad55-afe06c6e35c4" />
+</Solution>
