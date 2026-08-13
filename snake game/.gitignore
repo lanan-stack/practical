@@ -1,0 +1,22 @@
+# .vs/
+
+# 编译输出
+x64/
+Debug/
+Release/
+obj/
+*.obj
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.log
+*.suo
+*.tlog/
+
+# IDE 用户配置
+*.vcxproj.user
+
+# 个人数据
+highscore.txt
+zz_write_probe.txt
