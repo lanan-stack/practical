@@ -1,0 +1,38 @@
+# ============================================================
+# EditorConfig —— 让 VS 自动按统一格式保存文件
+# ------------------------------------------------------------
+# 作用：在本目录（含子目录）里新建或保存的文件，VS 2022 会按照下面的
+#       规则处理。最重要的一条是 charset = utf-8-bom：
+#       以后新建的 .c/.h 会自动存成"UTF-8 带 BOM"，
+#       不会出现 GBK 与 UTF-8 混用导致的乱码问题。
+# ============================================================
+root = true
+
+# ---------- 所有文件 ----------
+[*]
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# ---------- C 语言源码：与已有代码保持一致，使用制表符缩进 ----------
+[*.{c,h}]
+charset = utf-8-bom
+indent_style = tab
+indent_size = 4
+
+# ---------- C++ 源码（单元测试用）----------
+[*.{cpp,hpp}]
+charset = utf-8-bom
+indent_style = space
+indent_size = 4
+
+# ---------- 工程与配置文件 ----------
+[*.{vcxproj,vcxproj.filters,vcxproj.user,slnx,props,targets,config}]
+charset = utf-8-bom
+indent_style = space
+indent_size = 2
+
+# ---------- Markdown 文档 ----------
+[*.md]
+charset = utf-8
+trim_trailing_whitespace = false
