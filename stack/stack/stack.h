@@ -1,19 +1,19 @@
-#include<stdio.h>
+ï»¿#include<stdio.h>
 #include<stdlib.h>
 #include<assert.h>
 
 typedef int STDataType;
 typedef struct stack
 {
-	STDataType* arr;//Ö¸ÏòÕ»Êı×é¿Õ¼äµÄÖ¸Õë
-	int top;//Ö¸ÏòÒª²åÈëµÄÎ»ÖÃ
-	int capacity;//ÈİÁ¿
-}stack;
+	STDataType* arr;//æŒ‡å‘æ ˆæ•°ç»„ç©ºé—´çš„æŒ‡é’ˆ
+	int top;//æŒ‡å‘è¦æ’å…¥çš„ä½ç½®
+	int capacity;//å®¹é‡
+} stack;
 
-void stackinit(stack* s);//³õÊ¼»¯
-void stackdestroy(stack* s);//Ïú»Ù
-void stackpush(stack* s, STDataType x);//ÈëÕ»
-void stackpop(stack* s);//³öÕ»,È¡Õ»¶¥ÔªËØ
-void stacktop(stack* s);//»ñÈ¡Õ»¶¥ÔªËØ²¢·µ»Ø
-void stacksize(stack* s);//Õ»ÖĞÔªËØ¸öÊı
-void stackempty(stack* s);//¼ì²âÕ»ÊÇ·ñÎª¿Õ
+void stackinit(stack* s);//åˆå§‹åŒ–
+void stackdestroy(stack* s);//é”€æ¯
+void stackpush(stack* s, STDataType x);//å…¥æ ˆ
+void stackpop(stack* s);//å‡ºæ ˆ,å–æ ˆé¡¶å…ƒç´ 
+void stacktop(stack* s);//è·å–æ ˆé¡¶å…ƒç´ å¹¶è¿”å›
+void stacksize(stack* s);//æ ˆä¸­å…ƒç´ ä¸ªæ•°
+void stackempty(stack* s);//æ£€æµ‹æ ˆæ˜¯å¦ä¸ºç©º

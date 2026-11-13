@@ -1,12 +1,12 @@
-#include"stack.h"
+ï»¿#include"stack.h"
 
-void stackinit(stack* s)//³õÊ¼»¯
+void stackinit(stack* s)//åˆå§‹åŒ–
 {
 	assert(s);
 	s->arr = (STDataType*)malloc(sizeof(STDataType) * 4);
 	if (s->arr == NULL)
 	{
-		printf("ÉêÇëÊ§°Ü");
+		printf("ç”³è¯·å¤±è´¥");
 		perror("malloc failed");
 		return ;
 	}
@@ -14,7 +14,7 @@ void stackinit(stack* s)//³õÊ¼»¯
 	s->top = 0;
 }
 
-void stackdestroy(stack* s)//Ïú»Ù
+void stackdestroy(stack* s)//é”€æ¯
 {
 	assert(s);
 	if(s->arr)
@@ -28,7 +28,7 @@ void stackdestroy(stack* s)//Ïú»Ù
 	s = NULL;
 }
 
-void stackpush(stack* s, STDataType x)//ÈëÕ»
+void stackpush(stack* s, STDataType x)//å…¥æ ˆ
 {
 	assert(s);
 	if (s->top > s->capacity - 1)
@@ -36,43 +36,43 @@ void stackpush(stack* s, STDataType x)//ÈëÕ»
 		STDataType*temp = (STDataType*)realloc(s->arr,sizeof(STDataType) * 2 * s->capacity);
 		if (temp == NULL)
 		{
-			printf("ÉêÇëÊ§°Ü");
+			printf("ç”³è¯·å¤±è´¥");
 			perror("malloc failed");
 			return ;
 		}
-		//ÉêÇë³É¹¦
+		//ç”³è¯·æˆåŠŸ
 		s->arr = temp;
 		s->capacity *= 2;
 	}
 	s->arr[s->top++] = x;
 }
 
-void stackpop(stack* s)//³öÕ»£¬È¡Õ»¶¥ÔªËØ
+void stackpop(stack* s)//å‡ºæ ˆï¼Œå–æ ˆé¡¶å…ƒç´ 
 {
 	assert(s);
 	s->top--;
 	printf("%d ", s->arr[s->top]);
 }
 
-void stacktop(stack* s)//»ñÈ¡Õ»¶¥ÔªËØ²¢·µ»Ø
+void stacktop(stack* s)//è·å–æ ˆé¡¶å…ƒç´ å¹¶è¿”å›
 {
 	assert(s);
 	printf("%d ", s->arr[s->top - 1]);
 }
 
-void stacksize(stack* s)//Õ»ÖĞÔªËØ¸öÊı
+void stacksize(stack* s)// æ ˆä¸­å…ƒç´ ä¸ªæ•°
 {
 	assert(s);
-	printf("Õ»ÖĞÔªËØ¸öÊıÎª£º%d", s->top);
+	printf("æ ˆä¸­å…ƒç´ ä¸ªæ•°ä¸ºï¼š%d", s->top);
 }
 
-void stackempty(stack* s)//¼ì²âÕ»ÊÇ·ñÎª¿Õ
+void stackempty(stack* s)//æ£€æµ‹æ ˆæ˜¯å¦ä¸ºç©º
 {
 	assert(s);
 	if (s->top == 0)
 	{
-		printf("Õ»Îª¿Õ");
+		printf("æ ˆä¸ºç©º");
 	}
 	else
-		printf("Õ»²»Îª¿Õ");
+		printf("æ ˆä¸ä¸ºç©º");
 }
