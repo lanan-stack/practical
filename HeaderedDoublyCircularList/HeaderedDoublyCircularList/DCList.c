@@ -90,6 +90,7 @@ void DCLPushBack(DCListNode* DCL, DCLDataType x)//尾插
 	dcl->next = DCL;
 	DCL->list_length++;
 }
+
 void DCLPopFront(DCListNode* DCL)//头删
 {
 	if (DCL->next == DCL)
@@ -172,7 +173,7 @@ void DCLInsert(DCListNode* DCL, int i, DCLDataType x)//在第i个节点后插入
 void DCLDelete(DCListNode* DCL,int i)//删除指定位置的节点
 {
 	assert(DCL);
-	if (i<0 || i>DCL->list_length)
+	if (i<1 || i>DCL->list_length)
 	{
 		printf("请求错误");
 		return;
@@ -182,8 +183,8 @@ void DCLDelete(DCListNode* DCL,int i)//删除指定位置的节点
 	{
 		del = del->next;
 	}
-	del->prev = del->next;
-	del->next = del->prev;
+	del->prev->next = del->next;
+	del->next->prev = del->prev;
 	free(del);
 	DCL->list_length--;
 }
