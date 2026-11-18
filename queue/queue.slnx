@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="queue/queue.vcxproj" Id="08cdd0ba-6390-4c08-994d-d10de40a3d6a" />
+</Solution>

@@ -1,0 +1,66 @@
+# ============================================================
+# .gitignore  -  D:\code\test_c
+# 只忽略「编译产物 / IDE 缓存 / 本机配置」，源码与工程文件一律保留。
+# 约定：LF 换行 + 纯 ASCII 注释（BOM 或 CRLF 会让首条规则失效）。
+# ============================================================
+
+# ---------- 1. 构建输出目录 (MSVC / Visual Studio) ----------
+x64/
+Win32/
+Debug/
+Release/
+obj/
+ipch/
+out/
+
+# ---------- 2. 编译中间文件 ----------
+*.obj
+*.o
+*.iobj
+*.ipdb
+*.pch
+*.pdb
+*.idb
+*.ilk
+*.exp
+*.lib
+*.tlog
+*.log
+*.lastbuildstate
+*.recipe
+*.sdf
+*.opensdf
+*.dt.d.json
+*.dt.module.json
+*.dt.module.json.command
+
+# ---------- 3. 可执行文件 ----------
+*.exe
+*.dll
+
+# ---------- 4. Visual Studio 用户配置 / 缓存 ----------
+.vs/
+*.user
+*.vcxproj.user
+*.suo
+*.aps
+*.ncb
+*.opendb
+*.VC.db
+*.db
+*.vsidx
+*.sln.docstates
+.vscode/*.log
+
+# ---------- 5. NuGet ----------
+packages/
+
+# ---------- 6. 运行时产生的数据文件 ----------
+highscore.txt
+hs_test_tmp/
+zz_write_probe.txt
+
+# ---------- 7. 操作系统垃圾 ----------
+Thumbs.db
+desktop.ini
+.DS_Store

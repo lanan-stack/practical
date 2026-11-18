@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="SListNode/SListNode.vcxproj" Id="52f1abc0-7c64-4ccb-add2-88f45cc11624" />
+</Solution>

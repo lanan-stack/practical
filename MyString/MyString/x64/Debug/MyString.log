@@ -1,5 +1,0 @@
-﻿  MyString.cpp
-D:\code\test_c\MyString\MyString\MyString.cpp(109,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  main.cpp
-  正在生成代码...
-  MyString.vcxproj -> D:\code\test_c\MyString\x64\Debug\StringSimulation.exe
