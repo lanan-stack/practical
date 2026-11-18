@@ -19,7 +19,7 @@ namespace lem
 		typedef T* iterator;
 		typedef const T* const_iterator;
 
-		bool empty()
+		bool empty() const
 		{
 			if (_start == _finish)
 			{
@@ -49,38 +49,37 @@ namespace lem
 				size_t old_size = size();
 				T* temp = new T[n];
 				//有数据
-				
-					for (size_t i = 0; i < old_size; i++)
-					{
-						temp[i] = _start[i];
-					}
-					delete[] _start;
-					_start = temp;
-					_finish = _start + old_size;
-					_endofstorage = _start + n;
-				
+
+				for (size_t i = 0; i < old_size; i++)
+				{
+					temp[i] = _start[i];
+				}
+				delete[] _start;
+				_start = temp;
+				_finish = _start + old_size;
+				_endofstorage = _start + n;
+
 			}
 		}
 
 		//用iterator支持链式调用，多次插入
-		iterator insert(iterator pos,const T& val)
+		iterator insert(iterator pos, const T& val)
 		{
 			assert(pos >= _start && pos <= _finish);
-			
+
 			if (_finish == _endofstorage)
 			{
 				size_t old_size = pos - _start;
 				reserve(capacity() == 0 ? 4 : 2 * capacity());
 				pos = _start + old_size;
 			}
+
 			
-			iterator end = _finish - 1;
-			iterator temp = _finish;
-			while (end >= pos)
+			iterator end = _finish;
+			while (end != pos)
 			{
-				*temp = *end;
+				*end = *(end - 1);
 				--end;
-				--temp;
 			}
 			*pos = val;
 			_finish++;
@@ -91,7 +90,7 @@ namespace lem
 		{
 			assert(pos >= _start && pos < _finish);
 			iterator temp = pos;
-			while (temp != _finish-1)
+			while (temp != _finish - 1)
 			{
 				*temp = *(temp + 1);
 				++temp;
@@ -133,7 +132,6 @@ namespace lem
 		MyVector() = default;
 
 		//vector<T> v{1,2,3} vector<T> v = {1,2,3}
-		template<class T>
 		MyVector(std::initializer_list <T> vt)
 		{
 			reserve(vt.size());//先扩容
@@ -144,7 +142,6 @@ namespace lem
 		}
 
 		//v2(v1)
-		template<class T>
 		MyVector(const MyVector<T>& vt)
 		{
 			reserve(vt.capacity());//扩容
@@ -152,6 +149,25 @@ namespace lem
 			{
 				push_back(v);
 			}
+		}
+
+		//v2 = v1
+		MyVector<T>& operator=(const MyVector<T>& vt)
+		{
+			if (this != &vt)
+			{
+				T* temp = new T[vt.capacity()];
+				for (size_t i = 0; i < vt.size(); i++)
+				{
+					temp[i] = vt._start[i];
+				}
+				delete[] _start;
+				//复制成功
+				_start = temp;
+				_finish = _start + vt.size();
+				_endofstorage = _start + vt.capacity();
+			}
+			return *this;
 		}
 
 		~MyVector()
@@ -166,7 +182,7 @@ namespace lem
 		
 		
 
-		template<class T>
+		
 		void resize(size_t n, T val = T())
 		{
 			if (n > size())
@@ -200,7 +216,7 @@ namespace lem
 		}
 
 
-		template<class T>
+		
 		void push_back(const T& x)
 		{
 			if (_finish == _endofstorage)
